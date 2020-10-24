@@ -1,0 +1,50 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: dbd0684d549905170b758d3a2fe0e1fee1e18165e96ea00f0519d70726f1f2a4
+
+name:           blst
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/timjp87/blst#readme>
+homepage:       https://github.com/timjp87/blst#readme
+bug-reports:    https://github.com/timjp87/blst/issues
+author:         Author name here
+maintainer:     t.jp@gmx.de
+copyright:      2020 Tim Jester-Pfadt
+license:        APACHE2
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/timjp87/blst
+
+library
+  exposed-modules:
+      Blst
+  other-modules:
+      Paths_blst
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_blst
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , blst
+  default-language: Haskell2010
