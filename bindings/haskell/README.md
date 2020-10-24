@@ -1,1 +1,3 @@
-# haskell
+# Blst
+
+Haskell bindings for blst library.
